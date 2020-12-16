@@ -102,7 +102,7 @@ const me = new Person({
    this.age = pAge;*/
    this.favoriteToy = pToy;
   }
-  Baby.prototype = Object(Person.prototype);
+  Baby.prototype = Object.create(Person.prototype);
   Baby.prototype.play = function(){
     return `Playing with ${this.favoriteToy}`;
   }
@@ -111,10 +111,10 @@ const me = new Person({
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
+    1. Window/Global object binding means the value of 'this' is the window or console object
+    2. Implicit binding means whatever is before the dot when calling the function is this
+    3. New binding is when using a constructor function this refers to the specific instance of the object created
+    4. Explicit binding is when you use call or apply to assign the context directly
   */
   
   
